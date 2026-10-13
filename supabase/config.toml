@@ -1,0 +1,55 @@
+# Supabase CLI configuration (local stack: `pnpm supabase start`).
+project_id = "autoservice-booking"
+
+[api]
+enabled = true
+port = 54321
+# Only "public" is exposed. Tables are not readable by anon; the app uses RPC functions.
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[storage]
+enabled = true
+file_size_limit = "8MiB"
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173"]
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+# No public sign-up: owners are created by `pnpm tenant:publish <slug> --owner-email ...`
+enable_signup = false
+enable_anonymous_sign_ins = false
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false
+secure_password_change = true
+
+[auth.rate_limit]
+sign_in_sign_ups = 30
+token_refresh = 150
+
+[edge_runtime]
+enabled = true
+policy = "per_worker"
+
+[functions.assistant]
+enabled = true
+# Authorisation is done inside the function (anon for clients, verified session + membership for owners).
+verify_jwt = false
+
+[functions.notify-worker]
+enabled = true
+# Protected by NOTIFY_WORKER_SECRET (shared with the cron job), not by a user JWT.
+verify_jwt = false

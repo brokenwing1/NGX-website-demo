@@ -1,0 +1,86 @@
+{
+  "name": "autoservice-booking",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "local:up": "bash scripts/local-up.sh",
+    "gateway": "tsx scripts/local-gateway/server.ts",
+    "db:reset": "bash scripts/db-reset.sh",
+    "seed:generate": "tsx scripts/generate-seed.ts",
+    "tenant:new": "tsx scripts/tenant/new.ts",
+    "tenant:validate": "tsx scripts/tenant/validate.ts",
+    "tenant:publish": "tsx scripts/tenant/publish.ts",
+    "tenant:verify": "tsx scripts/tenant/verify.ts",
+    "vapid:generate": "tsx scripts/vapid-generate.ts",
+    "demo:build": "tsx scripts/build-demo.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@astryxdesign/core": "^0.6.8",
+    "@astryxdesign/theme-neutral": "^0.6.8",
+    "@phosphor-icons/react": "^2.1.7",
+    "@stylexjs/stylex": ">=0.18.0 <0.20.0",
+    "@supabase/supabase-js": "^2.50.0",
+    "@tanstack/react-query": "^5.80.0",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "jose": "^6.0.11",
+    "liquid-gl": "^2.0.1",
+    "openai": "^5.8.0",
+    "postgres": "^3.4.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.0",
+    "web-push": "^3.6.7",
+    "workbox-core": "^7.3.0",
+    "workbox-expiration": "^7.3.0",
+    "workbox-precaching": "^7.3.0",
+    "workbox-routing": "^7.3.0",
+    "workbox-strategies": "^7.3.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/web-push": "^3.6.4",
+    "@vitejs/plugin-react": "^5.0.0",
+    "sharp": "^0.34.2",
+    "supabase": "^2.30.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.0.0",
+    "vite-plugin-pwa": "^1.0.1"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "linux"
+      ],
+      "cpu": [
+        "current",
+        "x64",
+        "arm64"
+      ],
+      "libc": [
+        "current",
+        "glibc"
+      ]
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "supabase",
+      "@astryxdesign/core"
+    ]
+  }
+}

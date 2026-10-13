@@ -1,0 +1,221 @@
+{
+  "$schema": "../../schemas/business.schema.json",
+  "slug": "ngx-detailing",
+  "name": "NGX Detailing",
+  "shortName": "NGX",
+  "tagline": "Детейлинг-студия: керамика, полировка, защитные плёнки",
+  "description": "Закрытые боксы с контролем пыли и светом для дефектовки. Делаем мойку, восстановительную полировку, керамику и бронеплёнку. Перед работой показываем состояние кузова, после — фотоотчёт.",
+  "locale": "ru-RU",
+  "timezone": "Europe/Moscow",
+  "currency": "RUB",
+  "contacts": {
+    "address": "Москва, Демонстрационный проезд, 7, стр. 2",
+    "phone": "+7 900 000-00-01",
+    "mapUrl": "https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+    "messengerUrl": "https://t.me/"
+  },
+  "theme": {
+    "accent": "#4690FF"
+  },
+  "booking": {
+    "slotStepMinutes": 30,
+    "minLeadMinutes": 120,
+    "maxDaysAhead": 45,
+    "cancelCutoffHours": 12,
+    "cancellationPolicy": "Отменить или перенести запись онлайн можно не позднее чем за 12 часов. Позже — по телефону студии."
+  },
+  "hours": {
+    "mon": [
+      "09:00-21:00"
+    ],
+    "tue": [
+      "09:00-21:00"
+    ],
+    "wed": [
+      "09:00-21:00"
+    ],
+    "thu": [
+      "09:00-21:00"
+    ],
+    "fri": [
+      "09:00-21:00"
+    ],
+    "sat": [
+      "10:00-20:00"
+    ],
+    "sun": [
+      "10:00-18:00"
+    ]
+  },
+  "closedDates": [
+    {
+      "date": "2026-12-31",
+      "note": "Предновогодний день"
+    },
+    {
+      "date": "2027-01-01",
+      "note": "Новый год"
+    }
+  ],
+  "specialHours": [],
+  "resources": [
+    {
+      "key": "wash-bay",
+      "name": "Моечный пост"
+    },
+    {
+      "key": "box-1",
+      "name": "Бокс 1"
+    },
+    {
+      "key": "box-2",
+      "name": "Бокс 2"
+    }
+  ],
+  "services": [
+    {
+      "key": "detail-wash",
+      "name": "Детейлинг-мойка",
+      "description": "Двухфазная мойка с обезжириванием, очистка дисков и арок, сушка, чернение резины.",
+      "category": "Мойка",
+      "duration": "1h30m",
+      "buffer": 15,
+      "price": 3500,
+      "resources": [
+        "wash-bay",
+        "box-1",
+        "box-2"
+      ],
+      "image": "images/services/detail-wash.jpg"
+    },
+    {
+      "key": "glass-coat",
+      "name": "Антидождь и очистка стёкол",
+      "description": "Удаление налёта и нанесение гидрофобного покрытия на все стёкла.",
+      "category": "Стёкла",
+      "duration": 60,
+      "buffer": 10,
+      "price": 2500,
+      "resources": [
+        "wash-bay",
+        "box-1",
+        "box-2"
+      ],
+      "image": "images/services/glass.jpg"
+    },
+    {
+      "key": "interior-clean",
+      "name": "Химчистка салона",
+      "description": "Комплексная химчистка сидений, потолка, ковров и пластика с сушкой.",
+      "category": "Салон",
+      "duration": "5h",
+      "buffer": 30,
+      "price": 12000,
+      "priceFrom": true,
+      "resources": [
+        "box-2",
+        "wash-bay"
+      ],
+      "image": "images/services/interior.jpg"
+    },
+    {
+      "key": "polish",
+      "name": "Восстановительная полировка",
+      "description": "Многоэтапная полировка кузова: убираем голограммы и мелкие царапины, возвращаем глубину цвета.",
+      "category": "Кузов",
+      "duration": "8h",
+      "buffer": 30,
+      "price": 18000,
+      "priceFrom": true,
+      "resources": [
+        "box-1",
+        "box-2"
+      ],
+      "image": "images/services/polish.jpg"
+    },
+    {
+      "key": "ceramic",
+      "name": "Керамическое покрытие",
+      "description": "Подготовка, полировка и керамика в 2 слоя. Машина остаётся в боксе два дня для полимеризации.",
+      "category": "Защита",
+      "duration": "2d",
+      "buffer": 60,
+      "price": 45000,
+      "priceFrom": true,
+      "resources": [
+        "box-1",
+        "box-2"
+      ],
+      "image": "images/services/ceramic.jpg"
+    },
+    {
+      "key": "ppf-front",
+      "name": "Бронеплёнка: зоны риска",
+      "description": "Полиуретановая плёнка на капот, бампер, фары и зеркала. Срок — два дня в боксе.",
+      "category": "Защита",
+      "duration": "2d",
+      "buffer": 60,
+      "price": 65000,
+      "priceFrom": true,
+      "resources": [
+        "box-1"
+      ],
+      "image": "images/services/ppf.jpg"
+    }
+  ],
+  "infoCards": [
+    {
+      "icon": "ShieldCheck",
+      "title": "Гарантия на покрытия",
+      "text": "Фиксируем материалы и слои в акте, гарантия до 3 лет."
+    },
+    {
+      "icon": "Camera",
+      "title": "Фотоотчёт",
+      "text": "Показываем состояние до и после — в мессенджере в день выдачи."
+    },
+    {
+      "icon": "Wind",
+      "title": "Чистый бокс",
+      "text": "Приточная вентиляция и свет для дефектовки — без пыли под покрытием."
+    }
+  ],
+  "gallery": [
+    {
+      "key": "work-01",
+      "image": "images/gallery/work-01.jpg",
+      "caption": "Керамика в 2 слоя, чёрный металлик"
+    },
+    {
+      "key": "work-02",
+      "image": "images/gallery/work-02.jpg",
+      "caption": "Полировка после неудачной мойки"
+    },
+    {
+      "key": "work-03",
+      "image": "images/gallery/work-03.jpg",
+      "caption": "Бронеплёнка на капот и фары"
+    },
+    {
+      "key": "work-04",
+      "image": "images/gallery/work-04.jpg",
+      "caption": "Детейлинг-мойка перед продажей"
+    },
+    {
+      "key": "work-05",
+      "image": "images/gallery/work-05.jpg",
+      "caption": "Полировка и керамика суперкара"
+    },
+    {
+      "key": "work-06",
+      "image": "images/gallery/work-06.jpg",
+      "caption": "Химчистка тёмного салона"
+    }
+  ],
+  "media": {
+    "hero": "images/hero.jpg",
+    "logo": "images/logo.png",
+    "icon": "images/icon.png",
+    "iconFullBleed": true
+  }
+}

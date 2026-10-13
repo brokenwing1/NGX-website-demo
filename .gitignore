@@ -1,0 +1,17 @@
+node_modules
+dist
+.env
+.env.local
+.local-storage
+playwright-report
+test-results
+*.log
+.DS_Store
+coverage
+supabase/.temp
+supabase/.branches
+.local-storage-e2e
+_probe.mjs
+dist-demo
+src/demo/data.generated.json
+dist-pages

@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "openai": "npm:openai@^5.8.0",
+    "postgres": "npm:postgres@^3.4.5",
+    "zod": "npm:zod@^4.1.0"
+  }
+}

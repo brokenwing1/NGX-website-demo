@@ -1,0 +1,161 @@
+{
+  "$schema": "../../schemas/business.schema.json",
+  "slug": "tork-service",
+  "name": "ТОРК Автосервис",
+  "shortName": "ТОРК",
+  "tagline": "Шиномонтаж, ТО и развал-схождение без очередей",
+  "description": "Городской автосервис на три поста. Меняем масло и фильтры, делаем шиномонтаж и балансировку, сход-развал на 3D-стенде. Запчасти — ваши или наши.",
+  "locale": "ru-RU",
+  "timezone": "Asia/Yekaterinburg",
+  "currency": "RUB",
+  "contacts": {
+    "address": "Екатеринбург, Демонстрационная ул., 15",
+    "phone": "+7 900 000-00-02",
+    "mapUrl": "https://yandex.ru/maps/?text=%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3"
+  },
+  "theme": {
+    "accent": "#FF7A1A"
+  },
+  "booking": {
+    "slotStepMinutes": 20,
+    "minLeadMinutes": 60,
+    "maxDaysAhead": 21,
+    "cancelCutoffHours": 2,
+    "cancellationPolicy": "Отмена онлайн — не позднее чем за 2 часа до визита."
+  },
+  "hours": {
+    "mon": [
+      "08:00-20:00"
+    ],
+    "tue": [
+      "08:00-20:00"
+    ],
+    "wed": [
+      "08:00-20:00"
+    ],
+    "thu": [
+      "08:00-20:00"
+    ],
+    "fri": [
+      "08:00-20:00"
+    ],
+    "sat": [
+      "09:00-17:00"
+    ],
+    "sun": []
+  },
+  "closedDates": [],
+  "specialHours": [],
+  "resources": [
+    {
+      "key": "lift-1",
+      "name": "Подъёмник 1"
+    },
+    {
+      "key": "lift-2",
+      "name": "Подъёмник 2"
+    },
+    {
+      "key": "alignment",
+      "name": "Стенд развала"
+    }
+  ],
+  "services": [
+    {
+      "key": "tire-change",
+      "name": "Шиномонтаж 4 колёс",
+      "description": "Снятие, монтаж и балансировка, R13–R19.",
+      "category": "Шины",
+      "duration": 40,
+      "buffer": 0,
+      "price": 2400,
+      "priceFrom": true,
+      "resources": [
+        "lift-1",
+        "lift-2"
+      ],
+      "image": "images/services/tires.jpg"
+    },
+    {
+      "key": "oil-change",
+      "name": "Замена масла и фильтра",
+      "description": "Слив, замена масляного фильтра, заливка масла. Масло можно привезти своё.",
+      "category": "ТО",
+      "duration": 40,
+      "buffer": 0,
+      "price": 900,
+      "priceFrom": true,
+      "resources": [
+        "lift-1",
+        "lift-2"
+      ],
+      "image": "images/services/oil.jpg"
+    },
+    {
+      "key": "alignment",
+      "name": "Развал-схождение",
+      "description": "Диагностика и регулировка углов на 3D-стенде, распечатка до/после.",
+      "category": "Ходовая",
+      "duration": 60,
+      "buffer": 0,
+      "price": 2200,
+      "resources": [
+        "alignment"
+      ],
+      "image": "images/services/alignment.jpg"
+    },
+    {
+      "key": "diagnostics",
+      "name": "Диагностика ходовой",
+      "description": "Осмотр подвески и рулевого на подъёмнике, список работ с ценами.",
+      "category": "Ходовая",
+      "duration": 40,
+      "buffer": 0,
+      "price": 800,
+      "resources": [
+        "lift-1",
+        "lift-2"
+      ],
+      "priceFrom": false
+    }
+  ],
+  "infoCards": [
+    {
+      "icon": "Wrench",
+      "title": "Три поста",
+      "text": "Два подъёмника и отдельный стенд развала — ждать меньше."
+    },
+    {
+      "icon": "Receipt",
+      "title": "Цена до начала работ",
+      "text": "Согласуем сумму перед ремонтом, без сюрпризов на кассе."
+    },
+    {
+      "icon": "Coffee",
+      "title": "Зона ожидания",
+      "text": "Кофе, Wi-Fi и окно в цех — видно, что делают с машиной."
+    }
+  ],
+  "gallery": [
+    {
+      "key": "shop-01",
+      "image": "images/gallery/shop-01.jpg",
+      "caption": "Сезонная замена шин"
+    },
+    {
+      "key": "shop-02",
+      "image": "images/gallery/shop-02.jpg",
+      "caption": "3D-стенд развала-схождения"
+    },
+    {
+      "key": "shop-03",
+      "image": "images/gallery/shop-03.jpg",
+      "caption": "Замена масла за 40 минут"
+    }
+  ],
+  "media": {
+    "hero": "images/hero.jpg",
+    "logo": "images/logo.png",
+    "icon": "images/icon.png"
+  }
+}

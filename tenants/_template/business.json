@@ -1,0 +1,81 @@
+{
+  "$schema": "../../schemas/business.schema.json",
+  "slug": "template-studio",
+  "name": "Название студии",
+  "shortName": "Студия",
+  "tagline": "Коротко: что вы делаете лучше всего",
+  "description": "Два-три предложения о студии: что делаете, на чём специализируетесь, почему к вам удобно.",
+  "locale": "ru-RU",
+  "timezone": "Europe/Moscow",
+  "currency": "RUB",
+  "contacts": {
+    "address": "Город, улица, дом",
+    "phone": "+7 900 000-00-00",
+    "mapUrl": "https://yandex.ru/maps/"
+  },
+  "theme": {
+    "accent": "#4690FF"
+  },
+  "booking": {
+    "slotStepMinutes": 30,
+    "minLeadMinutes": 60,
+    "maxDaysAhead": 30,
+    "cancelCutoffHours": 3,
+    "cancellationPolicy": "Отменить запись онлайн можно не позднее чем за 3 часа."
+  },
+  "hours": {
+    "mon": ["09:00-20:00"],
+    "tue": ["09:00-20:00"],
+    "wed": ["09:00-20:00"],
+    "thu": ["09:00-20:00"],
+    "fri": ["09:00-20:00"],
+    "sat": ["10:00-18:00"],
+    "sun": []
+  },
+  "closedDates": [],
+  "specialHours": [],
+  "resources": [
+    { "key": "post-1", "name": "Пост 1" },
+    { "key": "post-2", "name": "Пост 2" }
+  ],
+  "services": [
+    {
+      "key": "service-1",
+      "name": "Услуга 1",
+      "description": "Что входит в услугу.",
+      "category": "Основное",
+      "duration": "1h",
+      "buffer": 15,
+      "price": 2000,
+      "resources": ["post-1", "post-2"],
+      "image": "images/services/service-1.jpg"
+    },
+    {
+      "key": "service-2",
+      "name": "Услуга 2 (долгая)",
+      "description": "Например, работа на два дня — машина остаётся на посту.",
+      "category": "Основное",
+      "duration": "2d",
+      "buffer": 60,
+      "price": 30000,
+      "priceFrom": true,
+      "resources": ["post-1"],
+      "image": "images/services/service-2.jpg"
+    }
+  ],
+  "infoCards": [
+    { "icon": "ShieldCheck", "title": "Гарантия", "text": "Коротко о гарантии." },
+    { "icon": "Clock", "title": "Вовремя", "text": "Коротко о сроках." },
+    { "icon": "Coffee", "title": "Удобно", "text": "Коротко о комфорте." }
+  ],
+  "gallery": [
+    { "key": "work-01", "image": "images/gallery/work-01.jpg", "caption": "Подпись к работе" },
+    { "key": "work-02", "image": "images/gallery/work-02.jpg", "caption": "Подпись к работе" },
+    { "key": "work-03", "image": "images/gallery/work-03.jpg", "caption": "Подпись к работе" }
+  ],
+  "media": {
+    "hero": "images/hero.jpg",
+    "logo": "images/logo.png",
+    "icon": "images/icon.png"
+  }
+}

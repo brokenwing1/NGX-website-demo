@@ -1,0 +1,67 @@
+{
+  "id": "/s/tork-service/",
+  "name": "ТОРК Автосервис",
+  "short_name": "ТОРК",
+  "description": "Шиномонтаж, ТО и развал-схождение без очередей",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "/s/tork-service/?source=pwa",
+  "scope": "/s/tork-service/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": [
+    "auto",
+    "lifestyle",
+    "business"
+  ],
+  "icons": [
+    {
+      "src": "/s/tork-service/icon-192.png?v=f902b5f1c3",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/s/tork-service/icon-512.png?v=f902b5f1c3",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/s/tork-service/maskable-512.png?v=f902b5f1c3",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Записаться",
+      "short_name": "Запись",
+      "url": "/s/tork-service/?book=1",
+      "icons": [
+        {
+          "src": "/s/tork-service/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Моя запись",
+      "short_name": "Моя запись",
+      "url": "/s/tork-service/my",
+      "icons": [
+        {
+          "src": "/s/tork-service/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
