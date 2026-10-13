@@ -2,6 +2,9 @@ node_modules
 dist
 .env
 .env.local
+.env.*
+!.env.example
+.vercel
 .local-storage
 playwright-report
 test-results
@@ -10,6 +13,8 @@ test-results
 coverage
 supabase/.temp
 supabase/.branches
+deployment/supabase/.temp
+deployment/supabase/.branches
 .local-storage-e2e
 _probe.mjs
 dist-demo

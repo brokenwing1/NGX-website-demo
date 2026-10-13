@@ -1,0 +1,10 @@
+.git
+.vercel
+node_modules
+.env*
+dist
+dist-demo
+dist-pages
+deployment/supabase/.temp
+supabase/.temp
+supabase/.branches

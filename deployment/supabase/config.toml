@@ -1,0 +1,17 @@
+# Remote-only settings. Apply with --workdir deployment and an explicit project ref.
+project_id = "autoservice-booking"
+
+[api]
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+
+[auth]
+site_url = "https://ngx-website-demo.vercel.app"
+additional_redirect_urls = ["https://ngx-website-demo.vercel.app/s/ngx-detailing/owner/"]
+enable_signup = false
+enable_anonymous_sign_ins = false
+enable_refresh_token_rotation = true
+
+[auth.email]
+enable_signup = false
+secure_password_change = true

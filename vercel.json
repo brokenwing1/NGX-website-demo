@@ -1,14 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "pnpm install --no-frozen-lockfile",
+  "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "cleanUrls": false,
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/", "destination": "/s/ngx-detailing/", "permanent": false }
+  ],
   "rewrites": [
-    { "source": "/s/:slug/owner/:path*", "destination": "/s/:slug/index.html" },
-    { "source": "/s/:slug/:path*", "destination": "/s/:slug/index.html" }
+    { "source": "/s/:slug/:path*/", "destination": "/s/:slug/index.html" }
   ],
   "headers": [
     {

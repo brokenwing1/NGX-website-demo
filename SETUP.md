@@ -66,6 +66,25 @@ pnpm supabase secrets set VAPID_PUBLIC_KEY=... VAPID_PRIVATE_KEY=... VAPID_SUBJE
 Ключ `service_role` и ключ LLM никогда не попадают во фронтенд: в сборку идут только переменные `VITE_*`
 (URL проекта и публичный anon‑ключ).
 
+### Развёрнутый NGX
+
+Сайт: https://ngx-website-demo.vercel.app/ — открывает `/s/ngx-detailing/`.
+Текущее состояние и оставшиеся действия описаны в `DEPLOYMENT-REVIEW.md`.
+Публичные переменные задаются в Vercel; серверные ключи — только в Supabase.
+
+На Windows используйте версию менеджера из проекта: `npx --yes pnpm@10.28.0 build`.
+При отсутствии DB-пароля доступен публикационный скрипт через авторизованный CLI:
+
+```powershell
+npx --yes pnpm@10.28.0 exec tsx scripts/tenant/publish-cli.ts ngx-detailing eejslqvgghhbdfeactss
+```
+
+Он загружает контент и создаёт install assets, но не активирует студию и не меняет
+аккаунты владельцев. Удалённые настройки Auth находятся в
+`deployment/supabase/config.toml` (сначала `supabase config diff --workdir deployment
+--project-ref <ref>`). `deployment/notify-cron.sql` создаёт только расписание worker
+без очистки данных и без замены существующих заданий.
+
 ## Продакшен: Vercel
 
 - Import Git repository, Framework: Other — всё остальное берётся из `vercel.json`
