@@ -13,5 +13,6 @@ enable_anonymous_sign_ins = false
 enable_refresh_token_rotation = true
 
 [auth.email]
-enable_signup = false
+# Keep email/password sign-in enabled; auth.enable_signup=false blocks registration.
+enable_signup = true
 secure_password_change = true

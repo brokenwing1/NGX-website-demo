@@ -32,7 +32,8 @@ enable_signup = false
 enable_anonymous_sign_ins = false
 
 [auth.email]
-enable_signup = false
+# Keep the email provider enabled; public registration is disabled under [auth].
+enable_signup = true
 enable_confirmations = false
 secure_password_change = true
 
